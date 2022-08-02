@@ -5,7 +5,7 @@
     <h2 class="py-3">Fumetti</h2>
     <p>Una pagina con dei fumetti</p>
 
-    <a href="-" class="btn btn-danger mb-4">Add Comic</a>
+    <a href="{{ route('comics.create') }}" class="btn btn-danger mb-4">Add Comic</a>
     
     <div class="row">
     @foreach ($comics as $comic)
