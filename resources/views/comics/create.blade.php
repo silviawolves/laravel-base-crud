@@ -5,6 +5,9 @@
     <h2 class="py-3">Aggiungi il tuo nuovo fumetto</h2>
     <p>yea che bello, non vedevo l'ora!</p>
 
+    <form action="{{ route('comics.store') }}" method="post">
+        @csrf
+
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label text-uppercase">Comic Title</label>
         <input type="text" class="form-control" name="title" id="exampleFormControlInput1">
@@ -27,7 +30,7 @@
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label text-uppercase">Comic Sale Date</label>
-        <input type="date" class="form-control" name="sale_date" id="exampleFormControlInput1">
+        <input type="date" class="form-control" name="date" id="exampleFormControlInput1">
     </div>
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label text-uppercase">Comic Type</label>
@@ -36,5 +39,7 @@
 
     <button type="submit" class="btn btn-success mb-5">Aggiungi fumetto</button>
     <a href="{{ route('home') }}" class="btn btn-secondary mb-5">Annulla</a>
+
+</form>
 
 @endsection
