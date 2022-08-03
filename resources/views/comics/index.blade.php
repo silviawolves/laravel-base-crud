@@ -17,6 +17,7 @@
                 <h5 class="card-title">{{ $comic['title'] }}</h5>
                 <h6 class="card-text" style="font-size: .8rem;">{{ $comic['series'] }}</h6>
                 <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">Details</a>
+                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Edit</a>
                 </div>
             </div>
         </div>
