@@ -18,6 +18,16 @@
                 <h6 class="card-text" style="font-size: .8rem;">{{ $comic['series'] }}</h6>
                 <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-success">Details</a>
                 <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-warning">Edit</a>
+
+                {{-- pulsante per cancellare che devo ricordare a memoria e non succederà mai --}}
+                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST"
+                    class="form-delete">
+                    @csrf
+                    @method('DELETE')
+
+                        <button type="submit" class="btn btn-danger">X</button>
+                    </form>
+
                 </div>
             </div>
         </div>
