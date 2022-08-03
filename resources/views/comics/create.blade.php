@@ -5,6 +5,18 @@
     <h2 class="py-3">Aggiungi il tuo nuovo fumetto</h2>
     <p>yea che bello, non vedevo l'ora!</p>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            Errori di validazione:
+
+            <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('comics.store') }}" method="post">
         @csrf
 
